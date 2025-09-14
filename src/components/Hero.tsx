@@ -92,7 +92,12 @@ const Hero: React.FC = () => {
                     clipPath: 'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)'
                   }}
                 >
-                  {/* Main image */}
+                <div 
+                  className="relative h-[400px] lg:h-[500px] bg-gradient-to-br from-blush to-champagne/20 shadow-2xl"
+                  style={{
+                    clipPath: 'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)'
+                  }}
+                >
                   <img 
                     src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop" 
                     alt="נשים תומכות זו בזו בתהליך שינוי אישי"
