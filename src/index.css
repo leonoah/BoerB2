@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rose: #E9A6B3;
+  --champagne: #E6C08B;
+  --sage-grey: #94A39A;
+  --ivory: #FFF7EF;
+  --blush: #F6E7E2;
+  --espresso: #2B1F1A;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Heebo', 'system-ui', 'sans-serif';
+  background-color: var(--ivory);
+  color: var(--espresso);
+  line-height: 1.6;
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-rose text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-rose focus:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply bg-sageGrey text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-sageGrey focus:ring-offset-2;
+}
+
+.btn-outline {
+  @apply border-2 border-champagne text-espresso px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-champagne hover:text-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2;
+}
+
+/* Animation delays */
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--champagne);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rose);
+}
