@@ -42,32 +42,38 @@ const Events: React.FC = () => {
     {
       id: 1,
       title: 'מעגל שיחה קהילתי',
-      description: 'נשים יושבות במעגל ומשתפות'
+      description: 'נשים יושבות במעגל ומשתפות',
+      imageUrl: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop'
     },
     {
       id: 2,
       title: 'כתיבה רפלקטיבית',
-      description: 'רגעי התבוננות אישית'
+      description: 'רגעי התבוננות אישית',
+      imageUrl: 'https://images.pexels.com/photos/3768911/pexels-photo-3768911.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop'
     },
     {
       id: 3,
       title: 'הליכת הכרות בחוץ',
-      description: 'שילוב של תנועה פיזית ורגשית'
+      description: 'שילוב של תנועה פיזית ורגשית',
+      imageUrl: 'https://images.pexels.com/photos/3768146/pexels-photo-3768146.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop'
     },
     {
       id: 4,
       title: 'מפגש Buddy',
-      description: 'שיחות תמיכה בין השותפות'
+      description: 'שיחות תמיכה בין השותפות',
+      imageUrl: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop'
     },
     {
       id: 5,
       title: 'סדנת חזון אישי',
-      description: 'בניית תכנית אישית לשינוי'
+      description: 'בניית תכנית אישית לשינוי',
+      imageUrl: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop'
     },
     {
       id: 6,
       title: 'חגיגת סיום קוהורט',
-      description: 'סיכום התהליך והישגים'
+      description: 'סיכום התהליך והישגים',
+      imageUrl: 'https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop'
     }
   ];
 
@@ -181,19 +187,23 @@ const Events: React.FC = () => {
                 key={item.id}
                 className="group relative bg-gradient-to-br from-blush to-ivory rounded-2xl aspect-square overflow-hidden border border-champagne/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-[1.02]"
               >
-                {/* Placeholder for actual photos */}
-                <div className="absolute inset-0 bg-gradient-to-br from-rose/10 to-champagne/20 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <div className="w-16 h-16 bg-champagne/30 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <Users className="w-8 h-8 text-espresso/60" />
-                    </div>
-                    <h3 className="font-semibold text-espresso mb-2">{item.title}</h3>
-                    <p className="text-sm text-espresso/70">{item.description}</p>
+                {/* Real images */}
+                <img 
+                  src={item.imageUrl}
+                  alt={item.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                
+                {/* Overlay with content */}
+                <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/20 to-transparent flex items-end">
+                  <div className="p-6 text-ivory">
+                    <h3 className="font-semibold mb-2">{item.title}</h3>
+                    <p className="text-sm text-ivory/90">{item.description}</p>
                   </div>
                 </div>
                 
                 {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-rose/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-rose/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             ))}
           </div>
