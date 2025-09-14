@@ -19,9 +19,9 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="text-center lg:text-right space-y-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+          {/* Content - Right side for RTL */}
+          <div className="text-center lg:text-right space-y-8 order-2 lg:order-1">
             {/* Badge */}
             <div className="inline-flex items-center space-x-reverse space-x-2 bg-blush px-4 py-2 rounded-full text-sm font-medium text-espresso opacity-0 animate-fade-in">
               <Sparkles className="w-4 h-4 text-rose" />
@@ -80,54 +80,42 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative opacity-0 animate-fade-up animate-delay-200">
+          {/* Hero Image - Left side for RTL */}
+          <div className="relative opacity-0 animate-fade-up animate-delay-200 order-1 lg:order-2">
             <div className="relative">
-              {/* Main image placeholder - Community collage */}
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-blush via-ivory to-champagne/20 p-8 shadow-2xl">
-                <div className="w-full h-full bg-gradient-to-br from-rose/10 to-champagne/20 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                  {/* Placeholder for authentic community photos */}
-                  <div className="absolute inset-4 grid grid-cols-2 gap-4">
-                    <div className="bg-ivory rounded-xl shadow-sm border border-champagne/20 flex items-center justify-center">
-                      <img 
-                        src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" 
-                        alt="נשים תומכות זו בזו בשיחה אישית"
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    </div>
-                    <div className="bg-ivory rounded-xl shadow-sm border border-champagne/20 flex items-center justify-center">
-                      <img 
-                        src="https://images.pexels.com/photos/3771120/pexels-photo-3771120.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" 
-                        alt="נשים בהליכה משותפת - תנועה פיזית ורגשית"
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    </div>
-                    <div className="bg-ivory rounded-xl shadow-sm border border-champagne/20 flex items-center justify-center">
-                      <img 
-                        src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" 
-                        alt="מעגל שיחה קהילתי - שיתוף וליווי"
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    </div>
-                    <div className="bg-ivory rounded-xl shadow-sm border border-champagne/20 flex items-center justify-center">
-                      <img 
-                        src="https://images.pexels.com/photos/6801874/pexels-photo-6801874.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" 
-                        alt="כתיבה רפלקטיבית - תהליך אישי מונחה"
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    </div>
-                  </div>
+              {/* Main diagonal image container */}
+              <div className="relative overflow-hidden">
+                {/* Diagonal clip path container */}
+                <div 
+                  className="relative h-[600px] lg:h-[700px] bg-gradient-to-br from-blush to-champagne/20 shadow-2xl"
+                  style={{
+                    clipPath: 'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)'
+                  }}
+                >
+                  {/* Main image */}
+                  <img 
+                    src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop" 
+                    alt="נשים תומכות זו בזו בתהליך שינוי אישי"
+                    className="w-full h-full object-cover"
+                  />
+                  
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-l from-rose/10 via-transparent to-champagne/10"></div>
                 </div>
               </div>
 
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 bg-rose/10 rounded-full p-4 shadow-lg">
+              {/* Floating decorative elements */}
+              <div className="absolute -top-6 -right-6 bg-rose/10 rounded-full p-4 shadow-lg backdrop-blur-sm">
                 <Sparkles className="w-6 h-6 text-rose" />
               </div>
               
-              <div className="absolute -bottom-6 -left-6 bg-champagne/10 rounded-full p-3 shadow-lg">
-                <div className="w-4 h-4 bg-champagne rounded-full"></div>
+              <div className="absolute -bottom-8 -left-8 bg-champagne/10 rounded-full p-6 shadow-lg backdrop-blur-sm">
+                <div className="w-6 h-6 bg-champagne rounded-full"></div>
               </div>
+
+              {/* Small accent shapes */}
+              <div className="absolute top-1/4 -left-4 w-8 h-8 bg-blush rounded-full shadow-md"></div>
+              <div className="absolute bottom-1/3 -right-4 w-6 h-6 bg-sageGrey/20 rounded-full shadow-md"></div>
             </div>
           </div>
         </div>
