@@ -3,7 +3,7 @@ import { Calendar, MessageCircle, Sparkles, ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-espresso overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-ivory overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 right-10 w-32 h-32 bg-rose/20 rounded-full blur-3xl"></div>
@@ -16,13 +16,13 @@ const Hero: React.FC = () => {
           {/* Content - Left side */}
           <div className="text-center lg:text-right space-y-8 order-2 lg:order-1">
             {/* Badge */}
-            <div className="inline-flex items-center space-x-reverse space-x-2 bg-rose/20 px-4 py-2 rounded-full text-sm font-medium text-rose opacity-0 animate-fade-in">
+            <div className="inline-flex items-center space-x-reverse space-x-2 bg-rose/20 px-4 py-2 rounded-full text-sm font-medium text-espresso opacity-0 animate-fade-in">
               <Sparkles className="w-4 h-4" />
               <span>פתחי את הכוח שלך</span>
             </div>
 
             {/* Main Heading - Large and Bold */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-ivory leading-tight opacity-0 animate-fade-up animate-delay-100">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-espresso leading-tight opacity-0 animate-fade-up animate-delay-100">
               תתחילי לדאוג{' '}
               <span className="text-rose block mt-2">
                 לביצועים שלך
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-ivory/70 font-light leading-relaxed max-w-lg mx-auto lg:mx-0 opacity-0 animate-fade-up animate-delay-200">
+            <p className="text-lg md:text-xl text-espresso/70 font-light leading-relaxed max-w-lg mx-auto lg:mx-0 opacity-0 animate-fade-up animate-delay-200">
               דאגי לפתח משאבים באופן רציף ולשלב אותם 
               עם הפרויקטים הקודמים שלך בתנועה קהילתית תומכת.
             </p>
@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
                 href="https://wa.me/972501234567"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-champagne text-champagne px-8 py-4 rounded-lg font-medium text-lg flex items-center justify-center space-x-reverse space-x-3 group hover:bg-champagne hover:text-espresso transition-all duration-300 hover:shadow-lg"
+                className="border-2 border-espresso text-espresso px-8 py-4 rounded-lg font-medium text-lg flex items-center justify-center space-x-reverse space-x-3 group hover:bg-espresso hover:text-ivory transition-all duration-300 hover:shadow-lg"
               >
                 <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 <span>למדי עוד</span>
@@ -93,7 +93,7 @@ const Hero: React.FC = () => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in animate-delay-500">
-          <div className="flex flex-col items-center text-ivory/60">
+          <div className="flex flex-col items-center text-espresso/60">
             <ArrowDown className="w-6 h-6 animate-bounce" />
           </div>
         </div>
