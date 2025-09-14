@@ -87,12 +87,6 @@ const Hero: React.FC = () => {
               <div className="relative overflow-hidden">
                 {/* Diagonal clip path container */}
                 <div 
-                  className="relative h-[600px] lg:h-[700px] bg-gradient-to-br from-blush to-champagne/20 shadow-2xl"
-                  style={{
-                    clipPath: 'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)'
-                  }}
-                >
-                <div 
                   className="relative h-[400px] lg:h-[500px] bg-gradient-to-br from-blush to-champagne/20 shadow-2xl"
                   style={{
                     clipPath: 'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)'
@@ -130,5 +124,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-  )
-}
