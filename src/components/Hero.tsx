@@ -19,9 +19,9 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          {/* Content - Right side for RTL */}
-          <div className="text-center lg:text-right space-y-8 order-2 lg:order-1">
+        <div className="flex flex-col items-center min-h-[80vh] space-y-12">
+          {/* Content - Top section */}
+          <div className="text-center space-y-8 pt-20">
             {/* Badge */}
             <div className="inline-flex items-center space-x-reverse space-x-2 bg-blush px-4 py-2 rounded-full text-sm font-medium text-espresso opacity-0 animate-fade-in">
               <Sparkles className="w-4 h-4 text-rose" />
@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start opacity-0 animate-fade-up animate-delay-300">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-up animate-delay-300">
               <a
                 href="https://calendly.com/boerb-consultation"
                 target="_blank"
@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
 
             {/* Trust indicators */}
             <div className="pt-8 opacity-0 animate-fade-up animate-delay-300">
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-reverse sm:space-x-8 text-sm text-espresso/70">
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-reverse sm:space-x-8 text-sm text-espresso/70">
                 <div className="flex items-center space-x-reverse space-x-2">
                   <div className="w-2 h-2 bg-rose rounded-full"></div>
                   <span>60%+ שומרות על צ׳ק-אין יומי</span>
@@ -80,14 +80,14 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Hero Image - Left side for RTL */}
-          <div className="relative opacity-0 animate-fade-up animate-delay-200 order-1 lg:order-2">
+          {/* Hero Image - Bottom section */}
+          <div className="relative opacity-0 animate-fade-up animate-delay-400 w-full max-w-4xl">
             <div className="relative">
               {/* Main diagonal image container */}
               <div className="relative overflow-hidden">
                 {/* Diagonal clip path container */}
                 <div 
-                  className="relative h-[600px] lg:h-[700px] bg-gradient-to-br from-blush to-champagne/20 shadow-2xl"
+                  className="relative h-[400px] md:h-[500px] lg:h-[600px] bg-gradient-to-br from-blush to-champagne/20 shadow-2xl mx-auto"
                   style={{
                     clipPath: 'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)'
                   }}
@@ -105,17 +105,17 @@ const Hero: React.FC = () => {
               </div>
 
               {/* Floating decorative elements */}
-              <div className="absolute -top-6 -right-6 bg-rose/10 rounded-full p-4 shadow-lg backdrop-blur-sm">
+              <div className="absolute -top-6 right-8 bg-rose/10 rounded-full p-4 shadow-lg backdrop-blur-sm">
                 <Sparkles className="w-6 h-6 text-rose" />
               </div>
               
-              <div className="absolute -bottom-8 -left-8 bg-champagne/10 rounded-full p-6 shadow-lg backdrop-blur-sm">
+              <div className="absolute -bottom-8 left-8 bg-champagne/10 rounded-full p-6 shadow-lg backdrop-blur-sm">
                 <div className="w-6 h-6 bg-champagne rounded-full"></div>
               </div>
 
               {/* Small accent shapes */}
-              <div className="absolute top-1/4 -left-4 w-8 h-8 bg-blush rounded-full shadow-md"></div>
-              <div className="absolute bottom-1/3 -right-4 w-6 h-6 bg-sageGrey/20 rounded-full shadow-md"></div>
+              <div className="absolute top-1/4 left-4 w-8 h-8 bg-blush rounded-full shadow-md"></div>
+              <div className="absolute bottom-1/3 right-4 w-6 h-6 bg-sageGrey/20 rounded-full shadow-md"></div>
             </div>
           </div>
         </div>
