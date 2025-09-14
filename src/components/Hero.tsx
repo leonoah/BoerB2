@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
         <svg className="absolute top-1/3 left-1/4 w-16 h-16 text-rose" viewBox="0 0 100 100" fill="none">
           <rect x="25" y="25" width="50" height="50" stroke="currentColor" strokeWidth="0.8" opacity="0.3" rx="8" />
         </svg>
-      </div>
+      </div> 
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
