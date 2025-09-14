@@ -1,18 +1,14 @@
 import React from 'react';
-import { Calendar, MessageCircle, Sparkles } from 'lucide-react';
+import { Calendar, MessageCircle, Sparkles, ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-ivory overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-espresso overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-8">
-        <svg className="absolute top-20 right-10 w-32 h-32 text-champagne" viewBox="0 0 100 100" fill="none">
-          <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.5" opacity="0.6" />
-          <circle cx="50" cy="50" r="25" stroke="currentColor" strokeWidth="0.5" opacity="0.4" />
-        </svg>
-        <svg className="absolute bottom-32 left-16 w-24 h-24 text-champagne" viewBox="0 0 100 100" fill="none">
-          <path d="M20 50 Q50 20 80 50 Q50 80 20 50" stroke="currentColor" strokeWidth="0.5" opacity="0.5" />
-        </svg>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 right-10 w-32 h-32 bg-rose/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 left-16 w-40 h-40 bg-champagne/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-blush/20 rounded-full blur-2xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -20,23 +16,26 @@ const Hero: React.FC = () => {
           {/* Content - Left side */}
           <div className="text-center lg:text-right space-y-8 order-2 lg:order-1">
             {/* Badge */}
-            <div className="inline-flex items-center space-x-reverse space-x-2 bg-blush px-4 py-2 rounded-full text-sm font-medium text-espresso opacity-0 animate-fade-in">
-              <Sparkles className="w-4 h-4 text-rose" />
-              <span>מאז 2020</span>
+            <div className="inline-flex items-center space-x-reverse space-x-2 bg-rose/20 px-4 py-2 rounded-full text-sm font-medium text-rose opacity-0 animate-fade-in">
+              <Sparkles className="w-4 h-4" />
+              <span>פתחי את הכוח שלך</span>
             </div>
 
             {/* Main Heading - Large and Bold */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-espresso leading-tight opacity-0 animate-fade-up animate-delay-100">
-              אנחנו יוצרות{' '}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-ivory leading-tight opacity-0 animate-fade-up animate-delay-100">
+              תתחילי לדאוג{' '}
               <span className="text-rose block mt-2">
-                תנועה מודרנית
+                לביצועים שלך
+              </span>
+              <span className="text-champagne block mt-2 text-4xl md:text-5xl lg:text-6xl">
+                כל יום.
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-espresso/70 font-light leading-relaxed max-w-lg mx-auto lg:mx-0 opacity-0 animate-fade-up animate-delay-200">
-              בוער בי היא סוכנות אסטרטגית המתמחה ביצירת תנועות קהילתיות, 
-              מיתוג מחדש ושינוי עבור נשים מתקדמות.
+            <p className="text-lg md:text-xl text-ivory/70 font-light leading-relaxed max-w-lg mx-auto lg:mx-0 opacity-0 animate-fade-up animate-delay-200">
+              דאגי לפתח משאבים באופן רציף ולשלב אותם 
+              עם הפרויקטים הקודמים שלך בתנועה קהילתית תומכת.
             </p>
 
             {/* CTA Buttons */}
@@ -45,9 +44,9 @@ const Hero: React.FC = () => {
                 href="https://calendly.com/boerb-consultation"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary text-lg flex items-center justify-center space-x-reverse space-x-3 group px-8 py-4 rounded-full"
+                className="bg-rose text-ivory px-8 py-4 rounded-lg font-medium text-lg flex items-center justify-center space-x-reverse space-x-3 group hover:bg-rose/90 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
               >
-                <span>קבלי ייעוץ</span>
+                <span>עקבי אחרי הביצועים</span>
                 <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
               </a>
               
@@ -55,65 +54,47 @@ const Hero: React.FC = () => {
                 href="https://wa.me/972501234567"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline text-lg flex items-center justify-center space-x-reverse space-x-3 group px-8 py-4 rounded-full"
+                className="border-2 border-champagne text-champagne px-8 py-4 rounded-lg font-medium text-lg flex items-center justify-center space-x-reverse space-x-3 group hover:bg-champagne hover:text-espresso transition-all duration-300 hover:shadow-lg"
               >
                 <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                <span>צור קשר</span>
+                <span>למדי עוד</span>
               </a>
             </div>
           </div>
 
-          {/* Images Grid - Right side */}
+          {/* Image - Right side */}
           <div className="relative opacity-0 animate-fade-up animate-delay-200 order-1 lg:order-2">
-            <div className="grid grid-cols-2 gap-6">
-              {/* Top Left - Large rounded image */}
-              <div className="col-span-2 lg:col-span-1">
-                <div className="relative h-64 lg:h-80 bg-gradient-to-br from-blush to-champagne/20 rounded-3xl overflow-hidden shadow-2xl">
-                  <img 
-                    src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" 
-                    alt="נשים תומכות זו בזו"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-rose/20 via-transparent to-transparent"></div>
+            <div className="relative">
+              {/* Main image container */}
+              <div className="relative h-96 lg:h-[500px] bg-gradient-to-br from-blush/20 to-champagne/10 rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
+                  alt="אישה מחייכת עם מחשב נייד"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-espresso/30 via-transparent to-transparent"></div>
+              </div>
+
+              {/* Floating decorative circle */}
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-ivory rounded-full flex items-center justify-center shadow-xl">
+                <div className="text-center">
+                  <div className="w-3 h-3 bg-rose rounded-full mx-auto mb-1"></div>
+                  <div className="w-2 h-2 bg-champagne rounded-full mx-auto"></div>
                 </div>
               </div>
 
-              {/* Top Right - Circular badge */}
-              <div className="flex items-start justify-end">
-                <div className="w-32 h-32 bg-espresso rounded-full flex items-center justify-center text-ivory shadow-xl">
-                  <div className="text-center">
-                    <div className="text-xs font-light mb-1">MODERN</div>
-                    <div className="text-xs font-light">MOVEMENT</div>
-                    <div className="w-6 h-6 mx-auto mt-2">
-                      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom - Wide rounded image */}
-              <div className="col-span-2">
-                <div className="relative h-48 bg-gradient-to-br from-champagne/20 to-sageGrey/20 rounded-3xl overflow-hidden shadow-xl">
-                  <img 
-                    src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop" 
-                    alt="קהילת נשים במפגש"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-ivory/10 to-champagne/20"></div>
-                </div>
+              {/* Top floating element */}
+              <div className="absolute -top-4 -left-4 bg-rose/20 rounded-full p-4 shadow-lg backdrop-blur-sm">
+                <Sparkles className="w-6 h-6 text-rose" />
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Floating decorative elements */}
-            <div className="absolute -top-4 -right-4 bg-rose/10 rounded-full p-3 shadow-lg backdrop-blur-sm">
-              <Sparkles className="w-5 h-5 text-rose" />
-            </div>
-            
-            <div className="absolute -bottom-6 -left-6 bg-champagne/10 rounded-full p-4 shadow-lg backdrop-blur-sm">
-              <div className="w-4 h-4 bg-champagne rounded-full"></div>
-            </div>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in animate-delay-500">
+          <div className="flex flex-col items-center text-ivory/60">
+            <ArrowDown className="w-6 h-6 animate-bounce" />
           </div>
         </div>
       </div>
